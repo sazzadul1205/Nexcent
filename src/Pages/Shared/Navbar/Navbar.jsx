@@ -66,7 +66,7 @@ const Navbar = () => {
                     ) : (
                         <>
                             <Link to={'/login'}><button className="text-[#4CAF4F] hover:bg-green-100 p-2 rounded-xl px-5">Login</button></Link>
-                            <Link to={'/register'}><button className="w-28 bg-[#4CAF4F] text-sm text-white p-2 rounded-md">Register</button></Link>
+                            <Link to={'/Register'}><button className="w-28 bg-[#4CAF4F] text-sm text-white p-2 rounded-md">Register</button></Link>
                         </>
                     )}
                 </div>

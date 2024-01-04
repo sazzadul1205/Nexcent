@@ -32,14 +32,14 @@ const Customer = () => {
                         </p>
                         <h1 className="text-xl font-semibold text-[#4CAF4F] mt-4">Tim Smith</h1>
                         <p className="text-[#89939E] mt-2">British Dragon Boat Racing Association</p>
-                        <div className="flex gap-8 mt-8 flex-col md:flex-row">
+                        <div className="flex flex-col md:flex-row items-center gap-2 mt-8">
                             {visibleClients.map((client) => (
-                                <div key={client._id} className="  w-16 mx-auto">
+                                <div key={client._id} className="w-16 mx-auto">
                                     <img src={client.logo} alt={client.name} className="w-full h-full object-contain cursor-pointer rounded-lg shadow-md" />
                                 </div>
                             ))}
                             <div className="flex items-center cursor-pointer gap-2">
-                                <h1 className=" text-[#4CAF4F] text-xl font-semibold text-center">Meet all customers</h1>
+                                <h1 className="text-[#4CAF4F] text-lg font-semibold">Meet all customers</h1>
                                 <img className="" src={Right} alt="" />
                             </div>
                         </div>
