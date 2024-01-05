@@ -8,7 +8,7 @@ import send from '../../../assets/Footer/send.svg';
 
 const Footer = () => {
     return (
-        <footer className="footer bg-[#263238] px-4 md:px-6 lg:px-40 py-8 lg:py-16">
+        <footer className="footer bg-[#263238] px-4 md:px-6 lg:px-40 py-8 lg:py-16 ">
             <div className="mb-6 md:mb-8">
                 <a className="text-xl flex gap-1 mb-3 md:mb-4 lg:mb-10">
                     <img src={Icon} alt="Icon"  />
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <nav className="text-white mb-6 md:mb-8">
                 <header className="footer-title text-lg md:text-xl font-semibold mb-2 md:mb-4">Company</header>
-                <a className="link link-hover text-xs md:text-sm">About us</a>
+                <a className="link link-hover text-xs md:text-sm ">About us</a>
                 <a className="link link-hover text-xs md:text-sm">Blog</a>
                 <a className="link link-hover text-xs md:text-sm">Contact us</a>
                 <a className="link link-hover text-xs md:text-sm">Pricing</a>

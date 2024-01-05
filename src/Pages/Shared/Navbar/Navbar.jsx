@@ -2,19 +2,25 @@ import { Link, NavLink } from "react-router-dom";
 import Nexcent from '../../../assets/Navbar/Nexcent.svg';
 import Icon from '../../../assets/Navbar/Icon.svg';
 import useAuth from "../../../Hooks/useAuth";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
+import Loader from "../../Components/Loader";
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
+    const axiosPublic = useAxiosPublic();
 
-    // Navbar links
-    const navLinks = [
-        { to: "/", label: "Home" },
-        { to: "/service", label: "Service" },
-        { to: "/feature", label: "Feature" },
-        { to: "/product", label: "Product" },
-        { to: "/testimonial", label: "Testimonial" },
-        { to: "/faq", label: "FAQ" },
-    ];
+    const { data: navLinks = [], isLoading } = useQuery({
+        queryKey: ["navLinks"],
+        queryFn: async () => {
+            const res = await axiosPublic.get(`/NavLink`);
+            return res.data;
+        },
+    });
+
+    if (isLoading) {
+        return <Loader />;
+    }
 
     const nav = navLinks.map((link) => (
         <li key={link.to}>
@@ -22,9 +28,9 @@ const Navbar = () => {
                 to={link.to}
                 exact
                 className={({ isActive }) =>
-                    `text-base font-medium text-black ${isActive
-                        ? "text-[#4CAF4F] "
-                        : ""
+                    `text-lg font-semibold ${isActive
+                        ? "text-[#4CAF4F]"
+                        : "text-black hover:text-[#4CAF4F]"
                     }`
                 }
             >
