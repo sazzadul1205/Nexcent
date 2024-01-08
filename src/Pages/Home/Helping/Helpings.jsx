@@ -18,8 +18,8 @@ const Helpings = () => {
     }
 
     return (
-        <div className=" bg-[#F5F7FA] my-12">
-            <div className="flex flex-col lg:flex-row text-[#4D4D4D] py-16 md:mx-36 justify-center gap-32">
+        <div className=" bg-[#F5F7FA] my-12 ">
+            <div className="flex flex-col lg:flex-row text-[#4D4D4D] py-16 md:mx-36 justify-around max-w-[1440px]">
                 <div className='my-auto '>
                     <h1 className="text-3xl lg:text-4xl font-semibold lg:w-[408px]">Helping a local <span className="text-[#4CAF4F]">business reinvent itself</span></h1>
                     <p>We reached here with our hard work and dedication</p>

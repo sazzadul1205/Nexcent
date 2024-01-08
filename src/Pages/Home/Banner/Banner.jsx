@@ -18,8 +18,8 @@ const Banner = () => {
         return <Loader/>;
     }
     return (
-        <div>
-            <div className="hero py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-36 bg-[#F5F7FA]">
+        <div className=' bg-[#F5F7FA] '>
+            <div className="hero py-12 md:py-16 lg:py-24 md:px-8 lg:px-36 max-w-[1440px] mx-auto">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-8 md:gap-16">
                     <img src={Banner.image} className="max-w-full md:max-w-sm lg:max-w-md rounded-lg shadow-2xl mb-8 md:mb-0" />
                     <div className="text-center md:text-left">

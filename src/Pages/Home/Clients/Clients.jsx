@@ -64,12 +64,12 @@ const Clients = () => {
     };
 
     return (
-        <div className="bg-white lg:mx-36 my-10">
-            <div className="text-center">
+        <div className="bg-white mt-10 lg:max-w-[1440px] mx-auto lg:px-[144px]">
+            <div className="text-center mb-4">
                 <h1 className="text-4xl font-semibold mb-2 text-[#4D4D4D]">Our Clients</h1>
                 <p className="text-[#4D4D4D]">We have been working with some Fortune 500+ clients</p>
             </div>
-            <div className='my-4'>
+            <div >
                 <Swiper {...swiperParams} className="mySwiper">
                     {clients.map((client) => (
                         <SwiperSlide key={client._id} onClick={() => openModal(client)}>

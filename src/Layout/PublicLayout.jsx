@@ -5,8 +5,10 @@ import Footer from "../Pages/Shared/Footer/Footer";
 const PublicLayout = () => {
     return (
         <div className="bg-white">
-            <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Navbar ></Navbar>
+            <div className="pt-[84px]">
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );
